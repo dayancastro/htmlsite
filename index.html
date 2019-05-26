@@ -5,81 +5,123 @@
     <link rel="stylesheet" type="text/css" href="css/imagem.css" />
     <link rel="stylesheet" type="text/css" href="css/navigation.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
 </head>
 
 <body>
 
 
     <div class="wrapper">
-        <div class="header">
-            <div class="azure">
-                <img src="img/vsts.png" height="30" width="30">
-                <span>Azure DevOps</span>
-            </div>            
-            <div class="breadcrumb">
-                <span>imagem-solucoes / SIDEC / Sprints</span>
+        <!-- <div class="header"> -->
+        <div class="azure">
+            <img src="img/vsts.png" height="30" width="30">
+            <span>Azure DevOps</span>
+        </div>
+        <div class="breadcrumb">
+            <span>imagem-solucoes / SIDEC / Sprints</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search" title="search">
+            <img src="img/search-icons.PNG" height="22" width="95">
+        </div>
+        <!-- </div>         -->
+        <div class="navigation">
+            <div class="project">
+                <img src="img/project-icon.PNG" height="30" width="30">
+                <span>SIDEC</span>
+                <img class="img-rigth" src="img/plus.PNG" height="30" width="30">
             </div>
-            <div class="search">
-                <input type="text" placeholder="Search" title="search">                
-            </div>
-        </div>        
-        <div class="navigation">          
-            <div class="project">SIDEC</div>
-            <div class="menubar">e
+            <div class="menubar">
                 <div class="overview">
                     <img src="img/overview.png" height="30" width="30">
                     <span>Overview</span>
                 </div>
                 <div class="boards">
-                    <img src="img/overview.png" height="30" width="30">
+                    <img src="img/boards-main.png" height="30" width="30">
                     <span>Boards</span>
 
                     <div class="boards-items">
-                        <img src="img/overview.png" height="30" width="30">
+                        <img src="img/wit.PNG" height="30" width="30">
                         <span>Work Items</span>
                     </div>
                     <div class="boards-items">
-                        <img src="img/overview.png" height="30" width="30">
+                        <img src="img/boards.PNG" height="30" width="30">
                         <span>Boards</span>
                     </div>
                     <div class="boards-items">
-                        <img src="img/overview.png" height="30" width="30">
+                        <img src="img/backlogs.PNG" height="30" width="30">
                         <span>Backlogs</span>
                     </div>
-                    <div class="boards-items">
-                        <img src="img/overview.png" height="30" width="30">
+                    <div class="boards-items sprints">
+                        <img src="img/sprints.PNG" height="30" width="30">
                         <span>Sprints</span>
                     </div>
                     <div class="boards-items">
-                        <img src="img/overview.png" height="30" width="30">
+                        <img src="img/queries.PNG" height="30" width="30">
                         <span>Queries</span>
                     </div>
                 </div>
                 <div class="repos">
-                    <img src="img/overview.png" height="30" width="30">
+                    <img src="img/repos.png" height="30" width="30">
                     <span>Repos</span>
                 </div>
                 <div class="pipelines">
-                    <img src="img/overview.png" height="30" width="30">
+                    <img src="img/pipelines.png" height="30" width="30">
                     <span>Pipelines</span>
                 </div>
                 <div class="test-plans">
-                    <img src="img/overview.png" height="30" width="30">
+                    <img src="img/testplan.png" height="30" width="30">
                     <span>Test Plans</span>
                 </div>
                 <div class="test-artifacts">
-                    <img src="img/overview.png" height="30" width="30">
-                    <span>Artifactss</span>
+                    <img src="img/artifacts.png" height="30" width="30">
+                    <span>Artifacts</span>
                 </div>
             </div>
             <div class="project-settings">
+                <img src="img/project.PNG" height="30" width="30">
                 <span>Project settings</span>
+                <img class="img-rigth" src="img/colapse.PNG" height="30" width="30">
             </div>
         </div>
-        <div class="content">B
-            <div class="box e">E</div>
-            <div class="box f">F</div>
-            <div class="box g">G</div>
+        <div class="content">
+            <div class="team">
+                <img src="img/sidecTeam.PNG" height="30" width="180">
+                <img class="img-rigth" src="img/burndown.PNG" height="50" width="280">
+            </div>
+            <div class="tabs">
+                <span class="tabs-item taskboard">Taskboard</span>
+                <span class="tabs-item">Backlog</span>
+                <span class="tabs-item">Capacity</span>
+                <button class="tabs-item">New Work Item</button>
+                <img class="img-rigth" src="img/sprint-icons.PNG" height="22" width="200px">
+            </div>
+            <div class="title title-bugs"><span>Colapse all</span></div>
+            <div class="title title-new"><span>New</span></div>
+            <div class="title title-active"><span>Active</span></div>
+            <div class="title title-closed"><span>Closed</span></div>
+            <div class="tasks tasks-bugs">
+                <div class="task task-bug">
+                    <div class="task-content">
+                        <img src="img/bug.PNG" height="20" width="20">
+                        <span>1092 [pesquisa] campo CPF não funciona</span>
+                        <span>Unassigned</span>
+                        <span>State new</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks tasks-new">
+                <div class="task task-item">
+                    <div class="task-content">
+                        <img src="img/task-icon.PNG" height="20" width="20">
+                        <span>1092 [pesquisa] campo CPF não funciona</span>
+                        <span>Unassigned</span>
+                        <span>State new</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks tasks-active"></div>
+            <div class="tasks tasks-closed"></div>
         </div>
     </div>
 </body>

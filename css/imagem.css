@@ -1,23 +1,14 @@
 .wrapper {
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(8, [col] auto);
+    /* grid-gap: 5px; */
+    grid-template-columns: repeat(10, [col] auto);
     grid-template-rows: repeat(2, [row] auto);
-    background-color: rosybrown;
+    /* background-color: rosybrown; */
     color: #444;
-}
-
-.header {
-    grid-column: col / span 8;
-    grid-row: 1;
-    background-color: red;
-    /* margin: 10px; */
-    border-bottom: 1px solid gray;
-
-    display: grid;
-    /* grid-gap: 10px; */
-    grid-template-columns: repeat(8, [col] auto);
-    grid-template-rows: repeat(1, [row] auto);
+    grid-template-rows: 40px auto auto auto auto auto auto auto auto auto;
+    height: 100%;
+    width: 100%;
+    grid-gap: 0px;
 }
 
 .navigation {
@@ -28,16 +19,21 @@
     display: grid;
     grid-template-columns: repeat(1, [col] auto);
     grid-template-rows: repeat(4, [row] auto);
-    /* grid-gap: 10px; */
-    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: 50px auto auto auto;
+    grid-gap: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 .content {
-    grid-column: col 2 / span 7;
+    grid-column: col 2 / span 9;
     grid-row: 2;
     background-color: yellow;
 
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, [col] auto);
+    grid-template-rows: repeat(6, [row] auto);
+    grid-template-rows: 50px 60px auto auto auto auto;
+    height: 100%;
+    width: 100%;
 }
