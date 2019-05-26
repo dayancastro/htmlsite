@@ -1,0 +1,73 @@
+.project {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    background-color: rosybrown;
+    margin: 10px;
+}
+
+.menubar {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: brown;
+    margin: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(1, [col] auto);
+    grid-template-rows: repeat(6, [row] auto);
+}
+
+.overview {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: yellow;
+    margin: 10px;
+    align-items: center;
+}
+
+.boards {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.boards-items {
+    background-color: green;
+    margin: 10px;
+    align-items: center;
+}
+
+.repos {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.pipelines {
+    grid-column: 1;
+    grid-row: 4;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.test-plans {
+    grid-column: 1;
+    grid-row: 5;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.test-artifacts {
+    grid-column: 1;
+    grid-row: 6;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.project-settings {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    background-color: yellow;
+    margin: 10px;
+}
