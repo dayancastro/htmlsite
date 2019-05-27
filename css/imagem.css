@@ -7,6 +7,7 @@
     height: 100%;
     width: 100%;
     grid-gap: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
 }
 
 .navigation {
@@ -14,9 +15,9 @@
     grid-row: 2;
     background-color: blue;
 
-    display: grid;
-    grid-template-columns: repeat(1, [col] auto);
-    grid-template-rows: 50px auto auto auto;
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto auto auto; */
     grid-gap: 0px;
     height: 100%;
     width: 100%;

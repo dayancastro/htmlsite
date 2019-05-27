@@ -1,26 +1,25 @@
 .azure {
     grid-column: col / span 10;
     grid-row: 1;
-    background-color: white;
-    /* grid-column: col;
-    grid-row: 1; */
+    background-color: white;    
     align-self: center;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;    
+    font-weight: bold;    
+    font-size: 14;
+}
+.azure span:last-child {
+    color:#0078D4;    
 }
 
 .breadcrumb {
     grid-column: col 2 / span 9;
-    grid-row: 1;
-    /* grid-column: col 2 / span 5;
-    grid-row: 1; */
-    align-self: center;
+    grid-row: 1;    
+    align-self: center;    
 }
 
 .search {
     grid-column: col 10;
     grid-row: 1;
-    /* grid-column: col 8;
-    grid-row: 1; */
     align-self: center;
 }
 
