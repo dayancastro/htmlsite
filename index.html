@@ -6,11 +6,11 @@
     <link rel="stylesheet" type="text/css" href="css/navigation.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/content.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <script src="js/modal.js"></script> 
 </head>
 
 <body>
-
-
     <div class="wrapper">
         <!-- <div class="header"> -->
         <div class="azure">
@@ -93,7 +93,7 @@
                 <span class="tabs-item taskboard">Taskboard</span>
                 <span class="tabs-item">Backlog</span>
                 <span class="tabs-item">Capacity</span>
-                <button class="tabs-item">New Work Item</button>
+                <button id="newWorkItemButton"  class="tabs-item">New Work Item</button>
                 <img class="img-rigth" src="img/sprint-icons.PNG" height="22" width="200px">
             </div>
             <div class="title title-bugs"><span>Colapse all</span></div>
@@ -123,6 +123,27 @@
             <div class="tasks tasks-active"></div>
             <div class="tasks tasks-closed"></div>
         </div>
+    </div>
+
+    <div id="newWorkItem" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <span class="witTitle">USER STORY 1136*</span>
+                <div class="witId"> <span>1136</span></div>
+                <input class="inputName" type="text" id="witName" placeholder="Title">
+                <div class="row3">
+                    <img src="img/avatar.PNG" height="20" width="20">
+                    <span class="witAvatar">Cassia Salles Gomes Rezende</span>
+                    <button id="salvarWitButton">Save & Close</button>
+                    <img src="img/modal-icons.PNG" height="25" width="150">
+                </div>
+            </div>
+            <!-- <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div> -->
+        </div>        
     </div>
 </body>
 

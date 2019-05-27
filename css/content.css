@@ -16,7 +16,7 @@
 .tabs {
     grid-column: col 1 / span 4;
     grid-row: 2;
-    background-color: green;
+    background-color: white;
 }
 
 .tabs img:nth-child(1) {
@@ -95,3 +95,12 @@
 .task-content {
     padding: 5px;
 }
+
+#newWorkItemButton {
+    border: 0px;
+    background-color: white;
+}
+
+#newWorkItemButton:hover {
+    background-color: #ebebeb;
+  }
