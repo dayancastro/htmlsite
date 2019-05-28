@@ -1,5 +1,5 @@
 window.onload = function () {
-    //refreshSprint();
+    refreshSprint();
     var modalWorkItem = document.getElementById("newWorkItem");
     var newWitButton = document.getElementById("newWorkItemButton");
     var span = document.getElementsByClassName("close")[0];
@@ -46,46 +46,50 @@ function salvarObjeto() {
     refreshSprint();
 }
 
-function refreshSprint() {
+function refreshSprint() {    
     var wits = JSON.parse(localStorage.getItem("wits"));
-    var bugs = document.getElementById('tasks-bugs');
-    var taskNew = document.getElementById('tasks-new');
-    var active = document.getElementById('tasks-active');
-    var closed = document.getElementById('tasks-closed');
-
-    bugs.childNodes = new Array();
-    taskNew.childNodes = new Array();
-    active.childNodes = new Array();
-    closed.childNodes = new Array();
-
-    wits.forEach(element, index => {
-        createTaskHtml(element, index);            
-    });
+    if(wits != undefined){
+        var bugs = document.getElementById('tasks-bugs');
+        var taskNew = document.getElementById('tasks-new');
+        var active = document.getElementById('tasks-active');
+        var closed = document.getElementById('tasks-closed');
+    
+        // bugs.innerHTML = null;
+        // taskNew.innerHTML = null;
+        // active.innerHTML = null;
+        // closed.innerHTML = null;
+    
+        for (var i = 0, len = wits.length; i < len; i++) {
+            bugs.appendChild(createTaskHtml(wits[i], i));
+        }    
+    }    
 }
 
-function createTaskHtml(task, count) {
+function createTaskHtml(taskWit, count) {
     var task = document.createElement('div');    
     task.id = 'task' + count;
-    task.className = 'task-' + task.status
-    task.onDrop = drop;
-    task.ondragover = allowDrop;
-
-    task.childNodes     
+    task.className = 'task task-bug';
+    task.draggable = true;
+    task.ondragstart = dragEvent; 
+    task.appendChild(getWitHtml(taskWit))
+    return task;
 }
 
 function getWitHtml(taskWit){
     var taskDiv = document.createElement('div');
     var spanName = document.createElement('span');
     var imgStatus = document.createElement('img');
-    spanName.value = taskWit.name;
+    spanName.innerHTML = taskWit.name;
     taskDiv.className = 'task-content';
-    taskDiv.insertAdjacentHTML('beforeend', '<img src="img/bug.PNG" height="20" width="20">');
-    task.childNodes.appendChild(spanName);
+    taskDiv.insertAdjacentHTML('beforeend', '<img src="img/story.PNG" height="20" width="20">');
+    taskDiv.appendChild(spanName);
+    taskDiv.insertAdjacentHTML('beforeend', '<img src="img/avatar.PNG" height="20" width="20"></img>');
     taskDiv.insertAdjacentHTML('beforeend', '<span>Unassigned</span><span>State</span>');
     imgStatus.className = 'imgStatus';
     imgStatus.src = 'img/status-'+ taskWit.status + '.png';
-    imgStatus.width = 27;
-    imgStatus.height = 70;
+    imgStatus.width = 70;
+    imgStatus.height = 27;
+    taskDiv.appendChild(imgStatus);
     return taskDiv;
 }
 
@@ -93,7 +97,7 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-function drag(ev) {
+function dragEvent(ev) {
     ev.dataTransfer.setData("id", ev.target.id);
 }
 
@@ -106,18 +110,23 @@ function drop(ev) {
 }
 
 function changeStatus(task, column) {
+    if(task.childNodes.length > 2)
+        var indice = 1;
+    else
+        var indice =0;
+        
     var img = document.createElement('img');
     img.height = 27;
     img.width = 70;
     img.className = 'imgStatus';
     var imgToBeRemoved = task.getElementsByClassName("imgStatus")[0];
-    task.childNodes[1].removeChild(imgToBeRemoved);
+    task.childNodes[indice].removeChild(imgToBeRemoved);   
 
     if (column.id == 'tasks-active' || column.id == 'tasks-new')
         img.src = 'img/status-new.png';
     else
         img.src = 'img/status-closed.png';
 
-    task.childNodes[1].appendChild(img);
+    task.childNodes[indice].appendChild(img);
     return task;
 }

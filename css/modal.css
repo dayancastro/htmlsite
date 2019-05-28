@@ -15,7 +15,7 @@
      background-color: #fefefe;
      margin: 15% auto;
      padding: 5px;
-     border: 1px solid rgb(201, 32, 32);
+     border: 1px solid gray;
      width: 80%;
 
      display: grid;
@@ -26,7 +26,7 @@
  .modal-header {
      grid-column: 1 / span 3;
      grid-row: 1;
-     background-color: blue;
+     background-color: white;
 
      display: grid;
      grid-template-columns: repeat(5, [col] auto);
@@ -48,7 +48,7 @@
      grid-column: col 1 / span 3;
      grid-row: 1;
      padding: 10px;
-     background-color: red;
+     background-color: white;
      align-items: center;
  }
 

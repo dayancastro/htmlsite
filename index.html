@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/content.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css" />
-    <script src="js/modal.js"></script> 
+    <script src="js/modal.js"></script>
 </head>
 
 <body>
@@ -95,7 +95,7 @@
                 <span class="tabs-item taskboard">Taskboard</span>
                 <span class="tabs-item">Backlog</span>
                 <span class="tabs-item">Capacity</span>
-                <button id="newWorkItemButton"  class="tabs-item">New Work Item</button>
+                <button id="newWorkItemButton" class="tabs-item">New Work Item</button>
                 <img class="img-rigth" src="img/sprint-icons.PNG" height="22" width="200px">
             </div>
             <div class="title title-bugs"><span>Colapse all</span></div>
@@ -103,10 +103,11 @@
             <div class="title title-active"><span>Active</span></div>
             <div class="title title-closed"><span>Closed</span></div>
             <div id="tasks-bugs" class="tasks tasks-bugs" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div id="bug1092" class="task task-bug" draggable="true" ondragstart="drag(event)">
+                <div id="bug1092" class="task task-bug" draggable="true" ondragstart="dragEvent(event)">
                     <div class="task-content">
-                        <img src="img/bug.PNG" height="20" width="20">
-                        <span>1092 [pesquisa] campo CPF não funciona</span>
+                        <img src="img/story.PNG" height="20" width="20">
+                        <span>1092 [pesquisa] campo CPF nao funciona</span>
+                        <img src="img/avatar.PNG" height="20" width="20">
                         <span>Unassigned</span>
                         <span>State</span>
                         <img class="imgStatus" src="img/status-new.PNG" height="27" width="70">
@@ -114,10 +115,11 @@
                 </div>
             </div>
             <div id="tasks-new" class="tasks tasks-new" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div id="wit1092" class="task task-item" draggable="true" ondragstart="drag(event)">
+                <div id="wit1092" class="task task-item" draggable="true" ondragstart="dragEvent(event)">
                     <div class="task-content">
                         <img src="img/task-icon.PNG" height="20" width="20">
                         <span>1092 [pesquisa] campo CPF não funciona</span>
+                        <img src="img/avatar.PNG" height="20" width="20">
                         <span>Unassigned</span>
                         <span>State</span>
                         <img class="imgStatus" src="img/status-new.PNG" height="27" width="70">
@@ -147,7 +149,7 @@
                 <p>Some text in the Modal Body</p>
                 <p>Some other text...</p>
             </div> -->
-        </div>        
+        </div>
     </div>
 </body>
 
